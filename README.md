@@ -106,3 +106,33 @@ $ git branch
 それでは、このバージョンに、新たなファイルを付け足してみましょう。作業ディレクトリの中に`new_code.py`という名前のファイルを作って、適当にPythonコードを書き込んで見てください。
 
 適当にPythonコードを編集しながら、2～3回コミットしてください。
+
+さて、この状態で`git log --oneline`して見てください。
+
+```git
+b673206 (HEAD -> new) Update new_code.py
+ad627f4 Update README.md slightly
+a69eb64 Add new_code.py and update README.me accordingly
+1c75357 (origin/master, origin/HEAD, master) Update README.md
+a1bf77a Update README.md
+35d6346 Update README.md
+ee93b29 Update README.md
+543e0ad Initial commit
+```
+
+以前のブランチ`master`よりも`new`が先に進んでいることが分かると思います。
+
+## ブランチをマージする
+
+新しいブランチの内容に満足して、これをメイン・バージョンにしたいときは、もとのブランチに合流させます。これによって、ブランチ`new`で試していた変更が全て`master`に反映されます。
+
+まずは、本流のブランチ`master`を`checkout`します。
+
+```bash
+git checkout master
+```
+
+`git branch`で、ちゃんと`master`に戻ったことを確認してください。
+
+```bash
+```

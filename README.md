@@ -135,4 +135,7 @@ git checkout master
 `git branch`で、ちゃんと`master`に戻ったことを確認してください。
 
 ```bash
+$ git branch
+* master
+  test
 ```

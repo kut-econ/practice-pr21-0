@@ -176,6 +176,14 @@ git merge new
 
 これで、`new`の変更が全て`master`に反映されました。
 
+実際には、ここで行った`merge`はfast-forward mergeという特別なマージです。このマージは、`new`が分岐してから`master`の方に全く変更がなかった場合に起きるマージで、単に`master`を`new`の先頭に移動させます。
+
+![fast-forward](img/fast-forward.drawio.png)
+
+一般には、`master`のほうにも変更がありますので、マージ過程は下図のようになり、マージはコミットとして履歴に残ります。
+
+![merge](img/merge.drawio.png)
+
 ブランチ`new`を`master`にマージしたら、`new`はもう必要ありませんので、次のようにして削除しておいてください。
 
 ```bash

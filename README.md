@@ -485,13 +485,13 @@ GitHubのサイトで、リモートリポジトリに編集が加わったこ�
 git status -sb
 ```
 
-このブランチをリモートにプッシュするには、`branch --set-upstream-to`で上流ブランチを`origin/new`に設定します。
+このブランチをリモートにプッシュするには、次のように`push`します。
 
 ```bash
-git branch --set-upstream-to=origin/new
+git branch -u origin new
 ```
 
-これで`push`すれば、リモートにも`new`が作られます。GitHubのサイトで、`2 branches`という表示が現れていることを確認してください。
+これでリモートにも`new`が作られます。GitHubのサイトで、`2 branches`という表示が現れていることを確認してください。
 
 ## リモートブランチの削除
 
